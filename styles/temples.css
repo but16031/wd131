@@ -1,0 +1,118 @@
+:root {
+    --primary-color:		#FFD700;
+    --secondary-color:	#A0B9DB;
+    --Accent1-color:		#1281EB;
+    --Accent2-color:		#C7E1F5;
+    
+    --Heading-font:		Special Elite, sans-serif;
+    --Text-font:		Roboto, sans-serif;  
+  }
+
+h1, h2, h3 {
+    color: #FF007F; 
+    font-family: var(--Heading-font);
+    margin: .5rem;
+}
+.main_header {
+    padding: 1rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(199, 225, 245, .5), rgb(18, 129, 235, .1));
+}
+#heading {
+    align-content: center;
+    text-align: center;
+}
+p {
+    margin-left: 3rem;
+    margin-right: 2rem;
+}
+
+a {
+    color: #A0B9DB;
+    text-decoration: none;
+    padding: .4rem;
+    font-weight: bolder;
+    font-size: large;
+}
+a:hover {
+    color: #FFD700; 
+}
+button {
+    background-color: #FFD700; 
+    color: #222831; 
+}
+.images_grid {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr;
+    background-color: #222831;
+    color: #A6A6A6;
+}
+.header_list {
+    flex-direction: row;
+}
+
+.header_list a {
+    display: block;
+    flex: 1 1 100%;
+}
+body {
+    background-color: #1A1A2E; 
+    color: #A6A6A6; 
+    font-family: var(--Text-font);
+}
+.container {
+    min-width: 500;
+    width: 100%; 
+    padding: 20px; 
+}
+footer {
+    padding: 1rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(199, 225, 245, .5), rgb(18, 129, 235, .1));
+}
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #FF007F;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+    color: #FF007F; /* Change the color of the symbol */
+}
+
+
+.header_list {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+
+.header_list a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+    font-size: xx-large;
+}
+.header_list a:hover {
+    color: #FFD700; 
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+	display: block;
+}
