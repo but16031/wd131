@@ -87,6 +87,8 @@ footer {
 
 #menu::before {
 	content: "☰";
+    font-size: xx-large;
+    font-weight: bolder;
 }
 
 #menu.open::before {

@@ -1,0 +1,138 @@
+:root {
+    --Background1-color: #2A211C; /* --(Deep Brown): For sections that need a warm, earthy tone. */
+    --Background2-color: #f3ece1; /* -- (Parchment): A soft, aged-paper look for content backgrounds.*/
+    --Text1-color: #1A1A1A;/* -- (Almost Black): For main body text, ensuring high contrast.*/
+    --Text2-color:#5B4636;/* -- (Dark Warm Brown): For headings or subheadings, creating a harmonious blend with the background.*/
+    --Accent1-color: #D5A25D;/* --  (Golden Ochre): To highlight links or buttons.*/
+    --Accent2-color: #A14231;/* --  (Terracotta): For emphasis elements, like icons or special text.*/
+    --Accent3-color:#779D8E;/* --  (Muted Teal): A cooler, complementary tone to add depth to the design without overpowering.*/
+    
+    --Heading-font:		Playfair Display, sans-serif;
+    --Text-font:		lato, sans-serif;  
+    --Accent-font:  Cormorant, sans-serif;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-family: var(--Heading-font);
+    color: var(--Text1-color);
+    justify-self: center;
+    text-align: center;
+    font-size: 3rem;
+    background-color: #f4d5a4;
+    margin-top: 1.5rem;
+    font-weight: 900;
+    padding: 1rem;
+    width: 100%;
+  }
+  h2 {
+    font-family: var(--Accent-font);
+    text-align: center;
+    color: var(--Text1-color);
+    font-weight:bolder;
+    font-size: 3rem;
+  }
+  p {
+    font-family: var(--Text-font);
+    color: var(--Text1-color);
+  }
+  main {
+    background-color: var(--Background2-color);
+    width: 100%;
+  }
+  body {
+    background-color: var(--Background1-color);
+    width: 100%;
+  }
+  footer {
+    padding: 1rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    text-align: center;
+}
+.grid1 {
+  grid-column: 1 / 2; 
+  grid-row: 1 / 2;     /* Position at the top left */
+  align-self: end;     /* Move it up to about 2/3rd of the height */
+  padding: 20px;
+  z-index: 2;          /* Above the image */
+  color: white;
+}
+.grid2 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;     /* Position at the bottom right */
+  align-self: start;   /* Move it up to about 1/3rd of the height */
+  padding: 20px;
+  z-index: 2;          /* Above the image */
+  color: white;
+}
+.attribute {
+    text-align: right;
+    font-weight: 900;
+
+}
+.hero {
+  grid-column: 1 / -1; /* Span across both columns */
+  grid-row: 1 / -1;    /* Span across both rows */
+  width: 100%;
+  height: auto;
+  object-fit: cover;   /* Ensure image covers the entire container */
+  z-index: 1;
+}
+.data {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  z-index: 2;
+  background-color: rgb(243, 236, 225, .95);
+  border-radius: 1rem;
+  margin: 2rem;
+}
+.weather {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+  z-index: 2;
+  background-color: rgb(243, 236, 225, .95);
+  border-radius: 1rem;
+  margin: 2rem;
+}
+.data_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  position: relative; 
+}
+.weather_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  position: relative;
+  
+}
+.d_data {
+  text-align: left;
+  padding-left: 1rem;
+  font-weight:400;
+  padding: .5rem;
+}
+.attribute {
+  text-align: right;
+  font-weight: 900;
+padding: .5rem;
+}
+img {
+  grid-column: 1 / -1; /* Span across both columns */
+  grid-row: 1 / -1;    /* Span across both rows */
+  width: 100%;
+  height: auto;
+  object-fit: cover;   /* Ensure image covers the entire container */
+  z-index: 1;  
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Grid with two columns */
+  grid-template-rows: 1fr 1fr 1fr;   /* Grid with two rows */
+  width: 100%;
+  position: relative;
+}

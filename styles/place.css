@@ -1,0 +1,73 @@
+:root {
+    --Background1-color: #2A211C; /* --(Deep Brown): For sections that need a warm, earthy tone. */
+    --Background2-color: #F3ECE1; /* -- (Parchment): A soft, aged-paper look for content backgrounds.*/
+    --Text1-color: #1A1A1A;/* -- (Almost Black): For main body text, ensuring high contrast.*/
+    --Text2-color:#5B4636;/* -- (Dark Warm Brown): For headings or subheadings, creating a harmonious blend with the background.*/
+    --Accent1-color: #D5A25D;/* --  (Golden Ochre): To highlight links or buttons.*/
+    --Accent2-color: #A14231;/* --  (Terracotta): For emphasis elements, like icons or special text.*/
+    --Accent3-color:#779D8E;/* --  (Muted Teal): A cooler, complementary tone to add depth to the design without overpowering.*/
+    
+    --Heading-font:		Playfair Display, sans-serif;
+    --Text-font:		lato, sans-serif;  
+    --Accent-font:  Cormorant, sans-serif;
+  }
+
+  h1 {
+    font-family: var(--Heading-font);
+    color: var(--Text1-color);
+    justify-self: center;
+    text-align: center;
+    width: 500px;
+    font-size: 3rem;
+    background-color: #f4d5a4;
+    margin: 0;
+    font-weight: 900;
+    padding: 1rem;
+  }
+  h2 {
+    font-family: var(--Accent-font);
+    text-align: center;
+    color: var(--Accent2-color);
+    font-weight:bolder;
+    font-size: 3rem;
+  }
+  p {
+    font-family: var(--Text-font);
+    color: var(--Text1-color);
+  }
+  main {
+    background-color: var(--Background2-color);
+    width: 500px;
+    justify-self: center;
+  }
+  body {
+    background-color: var(--Background1-color);
+  }
+  footer {
+    padding: 1rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    text-align: center;
+}
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.attribute {
+    text-align: right;
+    font-weight: 900;
+
+}
+.data {
+    text-align: left;
+    padding-left: 1rem;
+    font-weight:400;
+
+}
+img {
+    width: 100%;
+}
