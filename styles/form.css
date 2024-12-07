@@ -1,0 +1,109 @@
+:root{
+    --Background: #f9f9f9;
+    --Text: #333333;
+    --Primary_Button: #007BFF;
+    --Hover_State: #0056b3;
+    --Borders: #dddddd;
+    --Input_Background: #ffffff;
+    --Error_Message: #e63946;
+    --Success_Message: #06d6a0;
+
+    --Primary_Font: Inter;
+    --Alternative: Roboto;
+    
+    --Body_text: 400;
+    --Labels_headings: 500;
+    
+    --Body_text: 16px;
+    --Headings: 24px;
+    --Labels: 15px;
+}
+h1 {
+    font-family: var(--Alternative);
+    text-align: center;
+    max-width: 400px;
+    font-size: 40px;
+}
+label, option{
+    display: block ;
+    padding-top: 1.5rem;
+    color: var(--Text);
+    font-size: var(--Labels);
+    font-family: var(--Primary_Font);
+    margin-left: 4.7%;
+    font-weight: 500;
+
+}
+form {
+    background-color: var(--Background);
+    width: 400px;
+    border: 1px solid var(--Borders);
+    border-radius: 6px;
+}
+input[type="submit"] {
+    display:  block;
+    background-color: var(--Primary_Button);
+    color: #ffffff;
+    margin-top: 2rem;
+    width: 92%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+input, select, textarea {
+    background-color: var(--Input_Background);
+    border-radius: .25rem;
+    padding-top: .75rem;
+    width: 90%;
+    margin-left: 5%;
+    max-width: 400px;
+    /* background-color: aqua; */
+}
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    padding-top: 0px;
+}
+.notoppadding {
+    padding: 2px;
+    margin-left: 2px;
+}
+
+body {
+    margin-left: 2rem;
+}
+/* stars */
+input[type="radio"] {
+	display: none;
+	position: relative;
+	caret-color: rgba(0, 0, 0, 0);
+}
+
+.stars {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+}
+
+.stars > label {
+	color: gold;
+	width: 30px;
+	height: 30px;
+	font-size: 2rem;
+	margin-left: 5%;
+	display: flex;
+	align-items: center;
+	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+    padding-top: 0px;
+}
+
+.stars > label:hover {
+	color: rgb(190, 144, 29);
+}
+
+.stars > label::before {
+	content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+	content: "\2605";
+}
