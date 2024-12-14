@@ -1,0 +1,133 @@
+/* 
+Color Scheme:
+I looked at a bunch of sites and I liked apple.com so this is an attemp 
+to kind of mimic the look of apple.com
+
+Primary Colors:
+    White: #FFFFFF (pure white for backgrounds)
+    Light Gray: #F5F5F5 (for subtle backgrounds)
+    Dark Gray: #1D1D1F (for text and primary elements)
+    Accent Silver: #86868B (for secondary text and dividers)
+
+Accent Colors:
+    Soft Blue: #0066CC (similar to Apple's link and highlight color)
+    Minimal Black: #000000 (for high-contrast elements)
+
+Font Scheme:
+Apple uses the San Francisco font family across their ecosystem. Since you might not have direct access to their exact font, I'll provide alternatives:
+
+Primary Font:
+    Roboto 
+    Inter 
+
+Font Weights:
+    Light: 300 (for subtle text)
+    Regular: 400 (for body text)
+    Medium: 500 (for headings)
+    Bold: 700 (for key highlights)
+
+Typography Guidelines:
+    Use clean, sans-serif fonts
+    Maintain generous line height (1.5-1.6)
+    Use font size hierarchy:
+
+    Body text: 16px
+    Headings: Scale up from 20px to 36px
+    Subtle text: 14px */
+
+    :root{
+        --backgrounds: #FFFFFF;
+        --subte_backgrounds: #F5F5F5;
+        --text_primary_elements: #1D1D1F;
+        --secondary_text_dividers: #86868B;
+        --link_highlights: #0066CC;
+        --high_contrast_elements: #000000;
+        --heading_text_font_weight: 500;
+        --body_text_font_weight: 400;
+        --subtle_text_font_weight: 300;
+        --key_hilight_text_font_weight: 700;
+        --primary_font: Roboto;
+        --secondary_font: Inter;
+        --body_text_size: 16px;
+        --heading_text_size: 36px;
+        --subtle_text: 14px;
+    }
+    * {
+        margin: 0;
+    }
+    h5 {
+        font-weight: 400;
+        color: var(--text_primary_elements);
+        margin-top: 1rem;
+    }
+    h1 {
+        font-weight: var(--heading_text_font_weight);
+        font-size: var(--heading_text_size);
+        font-family: var(--primary_font);
+        color: var(--text_primary_elements);
+    
+    }
+    a, p {
+        font-family: var(--primary_font);
+        color: var(--text_primary_elements);
+        text-align: center;
+    }
+    header, footer {
+        background-color: var(--subte_backgrounds);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .header_list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+    a {
+        padding: 1rem;
+        text-decoration: none;
+        font-size: xx-large;
+    }
+    .images_grid {
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        color: var(--text_primary_elements);
+        justify-self: center;
+    }
+    img {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+    .container img {
+        display: block;
+        width: 100%;
+    }
+    .container img:hover{
+        opacity: .7;
+    }
+    #category {
+        opacity: .8;
+    }
+    .container {
+        max-width: 1000px;
+        justify-self: center;
+    }
+    footer {
+        padding: 2rem;
+    }
+    #contact {
+        color: var(--link_highlights);
+        font-family: var(--primary_font);
+        font-size: var(--body_text_size);
+
+    }
+    #suggestion_form {
+        display:none;
+    }
+    #logo {
+        width: 75px;
+        opacity: .8;
+    }

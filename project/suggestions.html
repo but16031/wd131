@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/suggestions.css">
+    <script src="scripts/footer.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 130 | Suggestions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&display=swap"
+        rel="stylesheet"></head>
+<body>
+    <header class="header">
+        <nav class="header_list">
+            <a href="project.html" id="home">Home</a>
+            <a href="project.html" id="bills">Bills</a>
+            <a href="project.html" id="finance">Finance</a>
+            <a href="project.html" id="food">Food</a>
+            <a href="project.html" id="games">Games</a>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <fieldset class="contact_info">
+                <legend>Contact Information</legend>
+                <div class="form-item column2">
+                    <label for="fullname">Name:</label>
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div class="form-item column2">
+                    <label for="useremail">Email:</label>
+                    <input type="email" name="useremail" id="useremail">
+                </div>
+            </fieldset>
+            <fieldset class="questions">
+                <legend>Suggestion</legend>
+                <div class="form-item column1">
+                    <label for="browser">How are we related?</label>
+                    <select name="browser" id="browser">
+                        <option value="">Optional</option>
+                        <option value="chrome">Wife</option>
+                        <option value="edge">Son</option>
+                        <option value="safari">Grand</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <label for="feedback">What should I add:</label>
+                <textarea name="feedback" id="feedback" rows="2" placeholder="A place to click for free money"></textarea>
+                
+            </fieldset>
+            <button>Submit Poll</button>
+        </form>
+    </main>
+
+</body>
+</html>

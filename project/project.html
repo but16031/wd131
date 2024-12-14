@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo2.avif" />
     <title>WDD 131 - Links to my stuff - Doug Butler</title>
     <meta name="description" content="WDD 131 - Links to my stuff | Doug Butler | Bank, recipies etc">
     <meta name="author" content="Doug Butler">
-    <link rel="stylesheet" href="styles/project.css"> -->
-    <link rel="stylesheet" href="styles/project-large.css" media="screen and (min-width: 550px)"> -->
+    <link rel="stylesheet" href="styles/style.css" media="screen and (min-width: 550px)"> 
     <script src="scripts/project.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,26 +18,57 @@
 </head>
 <body>
     
-    <header>
-        <h1 class="main_header">Our Stuff</h1>
-        <button type="button" id="menu"></button>
-    </header>
-    <main  class="container">
+    <header class="header">
+        <img id="logo" src="images/logo2.png" alt="">
         <nav class="header_list">
             <a href="#" id="home">Home</a>
-            <a href="#" id="old">Old</a>
-            <a href="#" id="new">New</a>
-            <a href="#" id="large">Large</a>
-            <a href="#" id="small">Small</a>
+            <a href="#" id="bills">Bills</a>
+            <a href="#" id="finance">Finance</a>
+            <a href="#" id="food">Food</a>
+            <a href="#" id="games">Games</a>
         </nav>
+    </header>
+    <main  class="container">
+        <img id="category" src="images/family.jpg" alt="">
+ 
         <section class="images_grid">
 
         </section>
+        <section id="suggestion_form">
+            <form>
+                <fieldset class="contact_info">
+                    <legend>Contact Information</legend>
+                    <div class="form-item column2">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname">
+                    </div>
+                    <div class="form-item column2">
+                        <label for="useremail">Email:</label>
+                        <input type="email" name="useremail" id="useremail">
+                    </div>
+                </fieldset>
+                <fieldset class="questions">
+                    <legend>Questions</legend>
+                    <div class="form-item column1">
+                        <label for="browser">What is your favorite browser?</label>
+                        <select name="browser" id="browser">
+                            <option value="chrome">Chrome</option>
+                            <option value="edge">Edge</option>
+                            <option value="safari">Safari</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-item column1">
+                        <label for="pet">Do you have a household pet?</label>
+                        <input class="pet" type="checkbox" name="pet" id="pet">
+                    </div>
+                    <label for="feedback">List the places you have lived:</label>
+                    <textarea name="feedback" id="feedback" rows="2" placeholder="Orem Utah, SLC Utah"></textarea>
+                    
+                </fieldset>
+                <button>Submit Poll</button>
+            </form>
+        </section>
     </main>
-    <footer>
-        <p id="currentyear">©</p>
-        <p id="lastModified"></p>
-        <script src="scripts/getdates.js"> </script>
-    </footer>
 </body>
 </html>

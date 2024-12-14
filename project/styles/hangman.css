@@ -1,0 +1,171 @@
+/* 
+Color Scheme:
+I looked at a bunch of sites and I liked apple.com so this is an attemp 
+to kind of mimic the look of apple.com
+
+Primary Colors:
+    White: #FFFFFF (pure white for backgrounds)
+    Light Gray: #F5F5F5 (for subtle backgrounds)
+    Dark Gray: #1D1D1F (for text and primary elements)
+    Accent Silver: #86868B (for secondary text and dividers)
+
+Accent Colors:
+    Soft Blue: #0066CC (similar to Apple's link and highlight color)
+    Minimal Black: #000000 (for high-contrast elements)
+
+Font Scheme:
+Apple uses the San Francisco font family across their ecosystem. Since you might not have direct access to their exact font, I'll provide alternatives:
+
+Primary Font:
+    Roboto 
+    Inter 
+
+Font Weights:
+    Light: 300 (for subtle text)
+    Regular: 400 (for body text)
+    Medium: 500 (for headings)
+    Bold: 700 (for key highlights)
+
+Typography Guidelines:
+    Use clean, sans-serif fonts
+    Maintain generous line height (1.5-1.6)
+    Use font size hierarchy:
+
+    Body text: 16px
+    Headings: Scale up from 20px to 36px
+    Subtle text: 14px */
+
+:root{
+    --backgrounds: #FFFFFF;
+    --subte_backgrounds: #F5F5F5;
+    --text_primary_elements: #1D1D1F;
+    --secondary_text_dividers: #86868B;
+    --link_highlights: #0066CC;
+    --high_contrast_elements: #000000;
+    --heading_text_font_weight: 500;
+    --body_text_font_weight: 400;
+    --subtle_text_font_weight: 300;
+    --key_hilight_text_font_weight: 700;
+    --primary_font: Roboto;
+    --secondary_font: Inter;
+    --body_text_size: 16px;
+    --heading_text_size: 36px;
+    --subtle_text: 14px;
+}
+h1 {
+    font-weight: var(--heading_text_font_weight);
+    font-size: var(--heading_text_size);
+    font-family: var(--primary_font);
+    color: var(--text_primary_elements);
+
+}
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    padding-top: 3rem;
+}
+#hangmanImage {
+    grid-column: 1;
+    width: 75%;
+    height: auto;
+}
+.game_grid {
+    grid-column: 2;
+    text-align: center;
+    margin: 0;
+}
+.letters {
+    margin-top: 20px;
+}
+.letter {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--subte_backgrounds);
+    border-radius: 5px;
+    color: var(--high_contrast_elements);
+    text-transform: uppercase;
+    font-family: var(--secondary_font);
+}
+.letter.correct {
+    background-color: #8f8;
+}
+.letter.wrong {
+    background-color: #f88;
+}
+#lettersContainer {
+    width: 300px;
+}
+
+#wordDisplay {
+    text-transform: uppercase;
+    font-family: var(--primary_font);
+    padding: 15px;
+    font-size: 2.5rem;
+}
+.lose {
+    color: #f88;
+    text-decoration: line-through;
+    text-decoration-color: red; /* Optional: change line color */
+    text-decoration-thickness: 2px; /* Optional: change line thickness */
+}
+.win {
+    color: #8f8; 
+}
+.win, .lose {
+    font-family: var(--primary_font);
+}
+.replay-btn {
+    background-color: var(--link_highlights);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: var(--body_text_size);
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    justify-self: center;
+}
+
+.replay-btn:hover {
+    background-color: #004080; /* Slightly darker blue on hover */
+}
+.body {
+    width: 900px;
+    
+}
+a, p {
+    font-family: var(--primary_font);
+    color: var(--text_primary_elements);
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: var(--subte_backgrounds);
+}
+.header_list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.header_list a {
+    padding: 1rem;
+    text-decoration: none;
+    font-size: xx-large;
+}
+footer {
+    padding: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+    background: var(--subte_backgrounds);
+}
+#contact {
+    color: var(--link_highlights);
+    font-family: var(--primary_font);
+    font-size: var(--body_text_size);
+
+}

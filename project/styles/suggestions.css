@@ -1,0 +1,133 @@
+:root{
+    --backgrounds: #FFFFFF;
+    --subte_backgrounds: #F5F5F5;
+    --text_primary_elements: #1D1D1F;
+    --secondary_text_dividers: #86868B;
+    --link_highlights: #0066CC;
+    --high_contrast_elements: #000000;
+    --heading_text_font_weight: 500;
+    --body_text_font_weight: 400;
+    --subtle_text_font_weight: 300;
+    --key_hilight_text_font_weight: 700;
+    --primary_font: Roboto;
+    --secondary_font: Inter;
+    --body_text_size: 16px;
+    --heading_text_size: 36px;
+    --subtle_text: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, inter;
+    font-size: 1.3em;
+}
+header {
+    margin: 0 auto;
+}
+h1 {
+    margin: 1rem;
+    font-size: 1.5em;
+    color: rgb(37, 41, 147);
+    text-align: center;
+}
+form {
+    width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    background-color: var(--subte_backgrounds);
+    border-radius: 2px;
+    border: solid 1px var(--secondary_text_dividers);
+    margin-top: 2rem;
+}
+.contact_info {
+    display: grid;
+    grid-gap: 1em;
+    margin: .5rem;
+    border: solid var(--secondary_text_dividers);
+    padding: .5rem;
+}
+.questions {
+    display: grid;
+    grid-gap: 1em;
+    margin: .5rem;
+    border: solid var(--secondary_text_dividers);
+    padding: .5rem;
+}
+legend {
+    padding: .5rem;
+    font-size: 1.3em;
+    color: var(--secondary_text_dividers);
+}
+input, select, textarea {
+    padding: .2rem;
+    font-size: 1.1rem;
+}
+label {
+    text-align: left;
+    padding-right: 4rem;
+}
+button:hover {
+    background-color: rgb(137, 179, 238);
+    color: black;
+}
+button {
+    margin: 2rem;
+    width: 120px;
+    justify-self: center;
+    background-color: var(--link_highlights);
+    border-radius: 2px;
+    border: none;
+    padding: 1rem;
+    color: white;
+}
+footer {
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 0.8em;
+    color: rgb(4, 4, 40);
+    padding: 2rem;
+
+}
+.form-item {
+    display: grid;
+    align-items: center;
+}
+.column1  {
+    grid-template-columns: 3fr 1fr;
+    margin: 0.5rem 0;
+}
+.column2 {
+    grid-template-columns: 1fr 2fr;
+}
+header, footer {
+    background-color: var(--subte_backgrounds);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.header_list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+a {
+    padding: 1rem;
+    text-decoration: none;
+    font-size: xx-large;
+}
+a, p {
+    font-family: var(--primary_font);
+    color: var(--text_primary_elements);
+    text-align: center;
+}
+#contact {
+    color: var(--link_highlights);
+    font-family: var(--primary_font);
+    font-size: var(--body_text_size);
+
+}
