@@ -93,14 +93,52 @@ const pages = [
   }
 ];
 
-const games = document.querySelector("#games")
-const food = document.querySelector("#food")
-const bills = document.querySelector("#bills")
-const finance = document.querySelector("#finance")
-const home = document.querySelector("#home")
+const menu = document.querySelector("#logo");
+const games = document.querySelector("#games");
+const ai = document.querySelector("#ai");
+const food = document.querySelector("#food");
+const bills = document.querySelector("#bills");
+const finance = document.querySelector("#finance");
+const home = document.querySelector("#home");
+const byui = document.querySelector("#byui");
+const email = document.querySelector("#email");
+const header = document.querySelector(".header_list");
+const dark_theme = document.querySelector("#dark_theme");
+const light_theme = document.querySelector("#light_theme");
+const sheet = document.styleSheets[0]; // Get the first stylesheet
+const rules = sheet.cssRules || sheet.rules;
+const background_selectors_primary = ["body"];
+const background_selectors_secondary = ["header, footer"];
+const color_selectors_primary = ["h5", "h1", "a, p", ".images_grid"];
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  applyTheme(savedTheme);
+}
+else {
+  applyTheme("light");
+}
 
+
+
+menu.addEventListener("click",() => {
+  if (header.classList.contains("hidden")){
+    header.classList.remove("hidden");
+  }
+  else{
+    header.classList.add("hidden");
+  }
+});
+byui.addEventListener("click",() => {
+  create_Card(pages.filter(page => page.category == "School"), "images/school.jpg")
+});
+email.addEventListener("click",() => {
+  create_Card(pages.filter(page => page.category == "email"), "images/email.jpg")
+});
 games.addEventListener("click",() => {
   create_Card(pages.filter(page => page.category == "Games"), "images/games2.jpg")
+});
+ai.addEventListener("click",() => {
+  create_Card(pages.filter(page => page.category == "AI"), "images/ai.jpg")
 });
 food.addEventListener("click",() => {
   create_Card(pages.filter(page => page.category == "Food"), "images/food.jpg")
@@ -114,6 +152,44 @@ bills.addEventListener("click",() => {
 home.addEventListener("click",() => {
   create_Card(pages, "images/family.jpg")
 });
+light_theme.addEventListener("click",() => {
+  applyTheme("light");
+});
+dark_theme.addEventListener("click",() => {
+    // Find and modify the specific rule
+    applyTheme("dark");
+  });
+
+function applyTheme(theme){
+  if (theme === "dark"){
+    for (let rule of rules) {
+      if (background_selectors_primary.includes(rule.selectorText)) {
+            rule.style.backgroundColor = "var(--text_primary_elements)"; // Change background color
+        }
+        if (background_selectors_secondary.includes(rule.selectorText)) {
+          rule.style.backgroundColor = "var(--secondary_text_dividers)"; // Change background color
+        }
+        if (color_selectors_primary.includes(rule.selectorText)) {
+          rule.style.Color = "var(--backgrounds)"; // Change background color
+        }
+    }
+  }
+  else {
+    for (let rule of rules) {
+      if (background_selectors_primary.includes(rule.selectorText)) {
+          rule.style.backgroundColor = "var(--backgrounds)"; // Change background color
+      }
+      if (background_selectors_secondary.includes(rule.selectorText)) {
+        rule.style.backgroundColor = "var(--subte_backgrounds)"; // Change background color
+      }
+      if (color_selectors_primary.includes(rule.selectorText)) {
+        rule.style.Color = "var(--text_primary_elements)"; // Change background color
+      }
+    }    
+  }
+  localStorage.setItem("theme", theme);
+}
+
 
 create_Card(pages);
 

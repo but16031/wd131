@@ -131,3 +131,18 @@ a, p {
     font-size: var(--body_text_size);
 
 }
+#logo {
+    width: 75px;
+    opacity: .8;
+}
+@media  (max-width: 500px){
+
+    .form-item, .column2, .column1, label {
+        display: block;
+    }
+    form {
+        width: auto;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}

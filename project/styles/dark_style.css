@@ -54,26 +54,27 @@ Typography Guidelines:
     }
     * {
         margin: 0;
+        
     }
     h5 {
         font-weight: 400;
-        color: var(--text_primary_elements);
+        color: var(--backgrounds);
         margin-top: 1rem;
     }
     h1 {
         font-weight: var(--heading_text_font_weight);
         font-size: var(--heading_text_size);
         font-family: var(--primary_font);
-        color: var(--text_primary_elements);
+        color: var(--backgrounds);
     
     }
     a, p {
         font-family: var(--primary_font);
-        color: var(--text_primary_elements);
+        color: var(--backgrounds);
         text-align: center;
     }
     header, footer {
-        background-color: var(--subte_backgrounds);
+        background-color: var(--secondary_text_dividers);
         justify-content: center;
         align-items: center;
         display: flex;
@@ -97,7 +98,7 @@ Typography Guidelines:
         display: grid;
         position: relative;
         grid-template-columns: 1fr 1fr;
-        color: var(--text_primary_elements);
+        color: var(--backgrounds);
         justify-self: center;
     }
     img {
@@ -136,70 +137,6 @@ Typography Guidelines:
         width: 75px;
         opacity: .8;
     }
-    #dark_theme, #light_theme {
-        width: 30px;
-        justify-self: right;
-    }
-    #light_theme:hover {
-        background-color: var(--secondary_text_dividers);
-        color: var(--backgrounds);
-        border-radius: 5px; 
-        padding: 1rem;     
-    }
-    #dark_theme:hover {
-        background-color: var(--secondary_text_dividers);
-        color: var(--backgrounds);
-        border-radius: 5px; 
-        padding: 1rem;     
-    }
     body {
-        background-color: var(--backgrounds);
-    }
-    @media  (max-width: 550px){
-
-        img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-        .images_grid {
-            display: flex;
-            flex-direction: column;
-        }
-        .header_list {
-            position: absolute;
-            top: 60px;
-            left: 0;
-            z-index: 1000;
-            background-color: var(--subte_backgrounds);
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            justify-content: left;
-            justify-items: left;
-            justify-self: left;
-        }
-        .hidden {
-            display: none;
-            visibility: hidden;
-        }
-        main {
-            position: relative;
-            top: 60px;
-        }
-        #logo {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 75px;
-            opacity: .8;
-        }
-        footer {
-            margin-top: 4rem;
-        }
-    }
-    .hidden {
-        display: none;
-        visibility: hidden;
+        background-color: var(--high_contrast_elements);
     }

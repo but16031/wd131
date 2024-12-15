@@ -99,7 +99,6 @@ h1 {
 #lettersContainer {
     width: 300px;
 }
-
 #wordDisplay {
     text-transform: uppercase;
     font-family: var(--primary_font);
@@ -130,13 +129,8 @@ h1 {
     transition: background-color 0.3s ease;
     justify-self: center;
 }
-
 .replay-btn:hover {
     background-color: #004080; /* Slightly darker blue on hover */
-}
-.body {
-    width: 900px;
-    
 }
 a, p {
     font-family: var(--primary_font);
@@ -167,5 +161,40 @@ footer {
     color: var(--link_highlights);
     font-family: var(--primary_font);
     font-size: var(--body_text_size);
-
+}
+#logo {
+    width: 75px;
+    opacity: .8;
+}
+main {
+    display: flex;
+    justify-self: center;
+    max-width: 900px;
+}
+@media  (max-width: 500px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    header, footer {
+        justify-content: center;
+    }
+    .header {
+        display: none;
+    }
+    .header_mobile {
+        display: flex;
+    }
+    #lettersContainer {
+        justify-self: center;
+    }
+    #hangmanImage {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    #wordDisplay {
+        font-size: 2rem;
+    }
 }
