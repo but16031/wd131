@@ -94,7 +94,7 @@ h1 {
     background-color: #8f8;
 }
 .letter.wrong {
-    background-color: #f88;
+    background-color: var(--secondary_text_dividers);
 }
 #lettersContainer {
     width: 300px;
