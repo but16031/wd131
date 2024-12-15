@@ -180,10 +180,6 @@ Typography Guidelines:
             justify-items: left;
             justify-self: left;
         }
-        .hidden {
-            display: none;
-            visibility: hidden;
-        }
         main {
             position: relative;
             top: 60px;
