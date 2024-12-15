@@ -198,6 +198,10 @@ Typography Guidelines:
         footer {
             margin-top: 4rem;
         }
+        #dark_theme, #light_theme {
+            display: none;
+            visibility: none;
+        }
     }
     .hidden {
         display: none;
